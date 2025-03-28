@@ -1,5 +1,4 @@
 import streamlit as st
-import google.generativeai as genai
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -13,7 +12,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 import seaborn as sns
-from datetime import datetime
+import google.generativeai as genai
 
 # ✅ Configure API Key securely
 if "GOOGLE_API_KEY" in st.secrets:
@@ -24,13 +23,13 @@ else:
     st.stop()
 
 # ✅ AI Response Generator
-def get_ai_response(prompt, fallback_message="⚠️ AI response unavailable. Please try again later."):
+def get_ai_response(prompt):
     try:
         model = genai.GenerativeModel("gemini-1.5-pro")
         response = model.generate_content(prompt)
-        return response.text.strip() if hasattr(response, "text") and response.text.strip() else fallback_message
+        return response.text.strip() if hasattr(response, "text") and response.text.strip() else "No response generated."
     except Exception as e:
-        return f"⚠️ AI Error: {str(e)}\n{fallback_message}"
+        return f"⚠️ AI Error: {str(e)}"
 
 # ✅ Generate Synthetic Data
 def generate_synthetic_data(samples=1000):
@@ -47,7 +46,6 @@ def generate_synthetic_data(samples=1000):
     df.to_csv("synthetic_inventory_data.csv", index=False)
     return df
 
-# Generate and save synthetic data
 df = generate_synthetic_data()
 
 # ✅ Data Preprocessing
@@ -65,7 +63,7 @@ df[target] = scaler.fit_transform(df[[target]])
 
 X_train, X_test, y_train, y_test = train_test_split(df[features], df[target], test_size=0.2, random_state=42)
 
-# ✅ Machine Learning Models
+# ✅ Train Machine Learning Models
 models = {
     "Linear Regression": LinearRegression(),
     "Random Forest": RandomForestRegressor(n_estimators=100, random_state=42),
@@ -82,16 +80,18 @@ for name, model in models.items():
 # ✅ Evaluate Models
 def evaluate_model(y_true, y_pred, model_name):
     return {
+        "Model": model_name,
         "MAE": mean_absolute_error(y_true, y_pred),
         "MSE": mean_squared_error(y_true, y_pred),
         "R2 Score": r2_score(y_true, y_pred)
     }
 
-evaluations = {name: evaluate_model(y_test, pred, name) for name, pred in predictions.items()}
-st.write("### Model Performance")
-st.write(evaluations)
+evaluation_results = [evaluate_model(y_test, predictions[name], name) for name in models.keys()]
 
-# ✅ Build LSTM Model
+df_eval = pd.DataFrame(evaluation_results)
+st.write("### Model Evaluation Results", df_eval)
+
+# ✅ LSTM Model
 X_train_seq = np.reshape(X_train.values, (X_train.shape[0], 1, X_train.shape[1]))
 X_test_seq = np.reshape(X_test.values, (X_test.shape[0], 1, X_test.shape[1]))
 
@@ -108,7 +108,18 @@ y_pred_lstm = lstm_model.predict(X_test_seq)
 y_test_actual = scaler.inverse_transform(y_test.values.reshape(-1, 1))
 y_pred_lstm_actual = scaler.inverse_transform(y_pred_lstm)
 
-# ✅ Plot Results
+# ✅ AI-Powered Insights
+ai_prompt = f"""
+Analyze the following sales prediction data and suggest strategies for optimizing inventory management:
+- Actual Sales: {y_test_actual.flatten().tolist()[:20]}
+- Predicted Sales (LSTM): {y_pred_lstm_actual.flatten().tolist()[:20]}
+"""
+insights = get_ai_response(ai_prompt)
+st.write("### AI-Powered Insights")
+st.write(insights)
+
+# ✅ Visualization
+st.write("### Sales Forecast vs Actual")
 fig, ax = plt.subplots(figsize=(12, 6))
 ax.plot(y_test_actual, label='Actual Sales', color='blue')
 ax.plot(y_pred_lstm_actual, label='Predicted Sales (LSTM)', color='red')
@@ -118,9 +129,10 @@ ax.set_ylabel('Sales')
 ax.set_title('AI-Powered Demand Forecasting')
 st.pyplot(fig)
 
-# ✅ Inventory Restocking Alerts
-df['restock_alert'] = df['sales'].apply(lambda x: 'Restock' if x < 0.3 else 'Sufficient')
+# ✅ Inventory Strategy Suggestion
+threshold = 0.3
+df['restock_alert'] = df['sales'].apply(lambda x: 'Restock' if x < threshold else 'Sufficient')
 
-# ✅ AI-Driven Inventory Strategy
 bulk_order_suggestion = "Increase bulk orders" if y_pred_lstm_actual.mean() > y_test_actual.mean() else "Optimize stock levels"
-st.write("### Suggested Inventory Strategy:", bulk_order_suggestion)
+st.write("### Suggested Inventory Strategy")
+st.write(bulk_order_suggestion)
