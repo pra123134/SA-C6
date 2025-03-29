@@ -2,6 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import pandas as pd
 import pydeck as pdk
+from streamlit_js_eval import streamlit_js_eval
 
 # Configure Streamlit API Key securely
 if "GOOGLE_API_KEY" in st.secrets:
@@ -35,9 +36,10 @@ if st.button("Trigger SOS Alert"):
     st.error("SOS Alert Sent! Emergency Assistance On the Way 🚑")
     
     # Get real-time GPS location from the browser
-    location = st.experimental_js("navigator.geolocation.getCurrentPosition", timeout=10)
-    if location and "coords" in location:
-        sos_location = [location["coords"]["latitude"], location["coords"]["longitude"]]
+    location = streamlit_js_eval("navigator.geolocation.getCurrentPosition((pos) => pos.coords)", need_reply=True)
+    
+    if location:
+        sos_location = [location["latitude"], location["longitude"]]
     else:
         sos_location = [19.0330, 73.0297]  # Default to Kharghar, Navi Mumbai if GPS fails
     
