@@ -1,8 +1,4 @@
-pandas
-numpy
-tensorflow
-scikit-learn
-matplotlib
-seaborn
 streamlit
 google-generativeai
+folium
+streamlit-folium
