@@ -21,24 +21,9 @@ This app provides real-time navigation, caregiver alerts, and SOS assistance for
 st.sidebar.header("User Authentication")
 user_type = st.sidebar.selectbox("Select User Type", ["Caregiver", "Vulnerable Individual", "Rescuer"])
 
-# Real-Time Navigation
-if st.button("Start Navigation"):
-    st.success("Real-Time Navigation Activated 🗺️")
-
-# Caregiver Alerts
-if user_type == "Caregiver":
-    if st.button("Send Alert to Caregiver"):
-        st.warning("Caregiver Alert Sent! 🚨")
-
-# SOS Alert System for Navi Mumbai
-if st.button("Trigger SOS Alert"):
-    st.error("SOS Alert Sent! Emergency Assistance On the Way 🚑")
-    
-    # Default SOS location for Navi Mumbai
-    df = pd.DataFrame([{ "lat": 19.0330, "lon": 73.0297 }])
-    
-    # Display SOS radius map for Navi Mumbai
-    st.pydeck_chart(pdk.Deck(
+# Real-Time Navigation and SOS Tracking
+def get_navigation_map():
+    return pdk.Deck(
         map_style='mapbox://styles/mapbox/light-v9',
         initial_view_state=pdk.ViewState(
             latitude=19.0330,
@@ -49,13 +34,27 @@ if st.button("Trigger SOS Alert"):
         layers=[
             pdk.Layer(
                 "ScatterplotLayer",
-                data=df,
+                data=pd.DataFrame([{ "lat": 19.0330, "lon": 73.0297 }]),
                 get_position="[lon, lat]",
-                get_color="[255, 0, 0, 160]",
-                get_radius=20000,  # Expanded radius to cover entire Navi Mumbai
+                get_color="[0, 0, 255, 160]",  # Blue color for navigation point
+                get_radius=100,
             )
-        ],
-    ))
+        ]
+    )
+
+if st.button("Start Navigation"):
+    st.success("Real-Time Navigation Activated 🗺️")
+    st.pydeck_chart(get_navigation_map())
+
+# Caregiver Alerts
+if user_type == "Caregiver":
+    if st.button("Send Alert to Caregiver"):
+        st.warning("Caregiver Alert Sent! 🚨")
+
+# SOS Alert System with Navigation Assistance
+if st.button("Trigger SOS Alert"):
+    st.error("SOS Alert Sent! Emergency Assistance On the Way 🚑")
+    st.pydeck_chart(get_navigation_map())
 
 # Multilingual Support
 language = st.selectbox("Select Language", ["English", "Spanish", "French", "German", "Mandarin"])
