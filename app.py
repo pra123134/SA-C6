@@ -2,6 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import folium
 from streamlit_folium import folium_static
+import geocoder
 
 # Configure Streamlit API Key securely
 if "GOOGLE_API_KEY" in st.secrets:
@@ -30,17 +31,18 @@ if user_type == "Caregiver":
     if st.button("Send Alert to Caregiver"):
         st.warning("Caregiver Alert Sent! 🚨")
 
-# Resource Mapping
-if st.button("Show Nearby Safe Locations"):
-    response = genai.generate_content("Find nearest safe locations for a vulnerable individual.")
-    st.write(response)
-
-# SOS Alert System with Map
+# SOS Alert System with GPS
 if st.button("Trigger SOS Alert"):
     st.error("SOS Alert Sent! Emergency Assistance On the Way 🚑")
     
+    # Get real-time GPS location
+    g = geocoder.ip('me')
+    if g.ok:
+        sos_location = g.latlng  # Get latitude and longitude
+    else:
+        sos_location = [37.7749, -122.4194]  # Default to San Francisco if GPS fails
+    
     # Display SOS location on map
-    sos_location = [37.7749, -122.4194]  # Example coordinates (San Francisco)
     sos_map = folium.Map(location=sos_location, zoom_start=14)
     folium.Marker(sos_location, popup="SOS Location", icon=folium.Icon(color="red")).add_to(sos_map)
     folium_static(sos_map)
