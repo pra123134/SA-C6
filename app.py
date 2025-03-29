@@ -32,7 +32,7 @@ if user_type == "Caregiver":
 
 # Resource Mapping
 if st.button("Show Nearby Safe Locations"):
-    response = genai.generate_text("Find nearest safe locations for a vulnerable individual.")
+    response = genai.generate_content("Find nearest safe locations for a vulnerable individual.")
     st.write(response)
 
 # SOS Alert System with Map
