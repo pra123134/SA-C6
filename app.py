@@ -30,21 +30,26 @@ if user_type == "Caregiver":
     if st.button("Send Alert to Caregiver"):
         st.warning("Caregiver Alert Sent! 🚨")
 
-# SOS Alert System
+# SOS Alert System with Real-Time Location
 if st.button("Trigger SOS Alert"):
     st.error("SOS Alert Sent! Emergency Assistance On the Way 🚑")
     
-    # Define Navi Mumbai SOS radius area
-    sos_location = [19.0330, 73.0297]  # Default to Kharghar, Navi Mumbai
+    # Get real-time GPS location from the browser
+    location = st.experimental_js("navigator.geolocation.getCurrentPosition", timeout=10)
+    if location and "coords" in location:
+        sos_location = [location["coords"]["latitude"], location["coords"]["longitude"]]
+    else:
+        sos_location = [19.0330, 73.0297]  # Default to Kharghar, Navi Mumbai if GPS fails
+    
     df = pd.DataFrame([{ "lat": sos_location[0], "lon": sos_location[1] }])
     
     # Display SOS radius map for Navi Mumbai
     st.pydeck_chart(pdk.Deck(
         map_style='mapbox://styles/mapbox/light-v9',
         initial_view_state=pdk.ViewState(
-            latitude=sos_location[0],
-            longitude=sos_location[1],
-            zoom=12,  # Adjusted zoom level to cover Navi Mumbai
+            latitude=19.0330,
+            longitude=73.0297,
+            zoom=11,  # Adjusted zoom level to cover entire Navi Mumbai
             pitch=0,
         ),
         layers=[
@@ -53,7 +58,7 @@ if st.button("Trigger SOS Alert"):
                 data=df,
                 get_position="[lon, lat]",
                 get_color="[255, 0, 0, 160]",
-                get_radius=10000,  # Radius covering Navi Mumbai
+                get_radius=20000,  # Expanded radius to cover entire Navi Mumbai
             )
         ],
     ))
