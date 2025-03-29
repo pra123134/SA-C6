@@ -1,8 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
-import folium
-from streamlit_folium import folium_static
-import geocoder
+import pandas as pd
+import pydeck as pdk
 
 # Configure Streamlit API Key securely
 if "GOOGLE_API_KEY" in st.secrets:
@@ -31,21 +30,33 @@ if user_type == "Caregiver":
     if st.button("Send Alert to Caregiver"):
         st.warning("Caregiver Alert Sent! 🚨")
 
-# SOS Alert System with GPS
+# SOS Alert System
 if st.button("Trigger SOS Alert"):
     st.error("SOS Alert Sent! Emergency Assistance On the Way 🚑")
     
-    # Get real-time GPS location
-    g = geocoder.ip('me')
-    if g.ok:
-        sos_location = g.latlng  # Get latitude and longitude
-    else:
-        sos_location = [37.7749, -122.4194]  # Default to San Francisco if GPS fails
+    # Define Navi Mumbai SOS radius area
+    sos_location = [19.0330, 73.0297]  # Default to Kharghar, Navi Mumbai
+    df = pd.DataFrame([{ "lat": sos_location[0], "lon": sos_location[1] }])
     
-    # Display SOS location on map
-    sos_map = folium.Map(location=sos_location, zoom_start=14)
-    folium.Marker(sos_location, popup="SOS Location", icon=folium.Icon(color="red")).add_to(sos_map)
-    folium_static(sos_map)
+    # Display SOS radius map for Navi Mumbai
+    st.pydeck_chart(pdk.Deck(
+        map_style='mapbox://styles/mapbox/light-v9',
+        initial_view_state=pdk.ViewState(
+            latitude=sos_location[0],
+            longitude=sos_location[1],
+            zoom=12,  # Adjusted zoom level to cover Navi Mumbai
+            pitch=0,
+        ),
+        layers=[
+            pdk.Layer(
+                "ScatterplotLayer",
+                data=df,
+                get_position="[lon, lat]",
+                get_color="[255, 0, 0, 160]",
+                get_radius=10000,  # Radius covering Navi Mumbai
+            )
+        ],
+    ))
 
 # Multilingual Support
 language = st.selectbox("Select Language", ["English", "Spanish", "French", "German", "Mandarin"])
