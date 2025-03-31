@@ -59,147 +59,9 @@ Desires
 
 Include screenshots and images from your document.
 ![Screenshot 1](images/SWOT.png)
-![Screenshot 2](images/screenshot2.png)
 
- <img width="335" alt="image" src="https://github.com/user-attachments/assets/0eaa850e-ab84-47c3-917b-714536b2a387" />
+   User Persona Development- Persona Examples:
 
-•  Customized Support: Tailored features for children, the elderly, and individuals with cognitive impairments to enhance reliability in critical situations.
-•  Real-Time Resource Mapping: Instantly identifies local resources and support networks for quick assistance.
-•  User-Friendly Interface: Simple design for easy adoption, especially by technology-averse users.
-•  Social Worker Partnerships: Collaborating with experts to refine services and improve credibility.
-•  
-Proactive Alert System: Notifies caregivers when an individual goes missing, ensuring faster response times.	•  Limited Awareness: Low initial adoption due to lack of understanding; requires targeted marketing.
-•  Tech Literacy Barriers: Non-tech-savvy users may struggle; strong onboarding support is essential.
-•  Resource Constraints: Ongoing updates need funding; outdated information reduces reliability.
-•  Privacy Concerns: Handling sensitive data requires strong security to build user trust.
-•  Integration Challenges: Compatibility with existing support systems is key for seamless adoption.
-
- Strengths	 Weaknesses
-•  Rising Safety Demand: Increasing concerns for children and elderly safety create a growing market.
-•  Awareness of Cognitive Impairments: Educational efforts can position your system as a trusted solution.
-•  Healthcare Partnerships: Collaborations enhance credibility and expand audience reach.
-•  Tech Advancements: GPS and AI innovations improve functionality and market appeal.
-•  Government Support: Alignment with senior care initiatives opens funding and growth opportunities.
-	•  Strong Competition: Established solutions make differentiation essential through unique features or pricing.
-•  Fast Tech Changes: Continuous innovation is needed to prevent obsolescence.
-•  Digital Safety Concerns: Transparency and strong security measures build user trust.
-•  Economic Challenges: Flexible pricing can help attract budget-conscious consumers.
-•  Regulatory Compliance: Adapting to evolving data protection laws is crucial to avoid legal issues.
-
- Opportunities	 Threats
-
-User Persona Development
--    Persona Example   :
-  -    Name: Smita
-  -    Age: 75
-  -    Behavior   : Struggles with traditional GPS navigation.
-  -    Pain Point   : Needs a simple interface with clear, step-by-step guidance.
- 
-  Define
- Based on the empathy mapping insights, define the core problems that the app aims to solve:
-●	Users need a way to feel safe and secure when lost.
-●	Users require a user-friendly navigation system that simplifies map reading.
-●	Users need immediate access to support services.
-
-   Problem Statement
--    How might we design an intuitive app that helps lost individuals safely navigate unfamiliar areas, connects them to resources, and provides real-time updates to caregivers?   
-
- 
-
-       Step 2: Ideate- Brainstorm potential features and functionalities that could address the defined problems:
-     Collaborative Brainstorming
--    Innovative Features   :
-  -    Visual SOS Flare   : Sends location and emergency message.
-  -    Emergency Resources Widget   : Displays nearby resources.
-  -    Multilingual and Accessible Interface   : Supports various languages and audio guidance.
-
-     Unique Concepts
--    Real-Time Mapping and Navigation   : User-friendly maps with voice guidance.
--    Caregiver Alerts   : Periodic updates on the user’s location.
--    Vibration Feedback for Alerts   : Ensures alerts are noticed in noisy environments.
-
--	User-Friendly Interface: A minimalistic design that highlights essential navigation features.
--	Voice Navigation: Implement voice-guided directions to reduce the need for users to read complex maps.
--	SOS Button: A prominent button that connects users to emergency services or designated contacts with a single tap.
--	Location Sharing: Allow users to share their location with trusted contacts for added security.
-
- 
-       Step 3: Prototype- Create a low-fidelity prototype of the app that includes the following key screens:
-
-     Prototype Requirements and Features
-1.    Home Screen: Displays the user’s current location and a simple navigation bar.
-      Login/Sign-Up and Home Page:-
-   - Simple login/sign-up with minimal input.
-   The home page shows a map with emergency resources and a prominent SOS button.
-
-2.    Real-Time Navigation : Provides step-by-step voice-guided directions with visual cues :
-   - Voice-enabled, step-by-step directions with visual prompts.
-
-3.    Caregiver Alerts   :
-   - Sends updates to family members about the user’s location.
-
-4.    Resource Mapping   :
-   - Displays resources within a 500-meter radius with color-coded icons.
-
-5.    SOS Alert System   :
-   - Emergency flare that shares location and message with caregivers.
-
-6.    Multilingual Support   :
-   - Language preferences for diverse users.
-
-7.    Vibration Feedback for Alerts   :
-   - Vibration notifications for alerts.
-
-     Tools Suggested
-       Step 4: Test
-
-     User Testing
-1.    Prototype Testing   :
-   - Conduct usability tests with a group of users from the target demographics.
-   - Gather feedback on the app’s usability, clarity, and effectiveness in emergencies.
-
-2.    Feedback Collection   :
-   - Use surveys and interviews to collect qualitative data on user experience.
-   - Identify areas for improvement based on user interactions.
-
-3.    Iterate   :
-   - Refine the prototype based on user feedback.
-   - Focus on enhancing features that users found confusing or difficult to use.
-
-
-
-       Step 5: Implement
-
-     Final Development
-- Collaborate with developers to build the app based on the refined prototype.
-- Ensure that the app is tested in real-world scenarios before launch.
-
-     Launch and Monitor
-- Launch the app and monitor user engagement and feedback.
-- Continuously update the app based on user needs and technological advancements.
-
-
-➢	Technologies & Tools used
-Napkin.ai
-Uizard.ai
-Motif.ai
-Blackbox.ai
-OnlinePersona creator- uxpressia.com/personas-online-tool, user persona.dev/
-https://founderpal.ai/swot-analysis-generator
-CHAT GPT
-➢	Demo & Screenshots
-
-
-
-       Conclusion
-The Smart System for Lost Individuals Support and Resource Mapping App prototype aims to alleviate the fears and challenges faced by individuals when they find themselves lost. By employing a design thinking approach, the app is tailored to meet user needs, providing simple navigation and immediate access to assistance. Through continuous testing and iteration, the app can evolve into a reliable resource for those in distress, ultimately enhancing their sense of safety and security.
-By following the Design Thinking approach, you can create a Smart System for Lost Individuals Support and a Resource Mapping App that effectively addresses the needs of vulnerable groups. The iterative process of empathizing, defining, ideating, prototyping, and testing will ensure that the final product is user-friendly, effective, and impactful.
-
-
-
-
-
-Persona
 Persona 1: Sumit, the Elderly User
 ●	Name: Sumit Patel
 ●	Age: 70
@@ -226,6 +88,7 @@ Quotes:
 "I just want an app that tells me where to go without all the fuss. Clear directions and a big button for help would be perfect."
  
 ________________________________________
+
 Persona 2: Ram, the Caregiver
 ●	Name: Ram Krishnan
 ●	Age: 35
@@ -252,6 +115,7 @@ Quotes:
 "I need to know where my clients are at all times. An app that keeps me updated would give me peace of mind."
  
 ________________________________________
+
 Persona 3: Mia, the Child
 ●	Name: Mia Johnson
 ●	Age: 10
@@ -277,6 +141,120 @@ Context of Use:
 Quotes:
 "I want an app that can help me find my way back home and is fun to use, like a game!"
  
+________________________________________
+
+Persona 4:
+●	Name: Smita
+●	Age: 75
+●	Behavior   : Struggles with traditional GPS navigation.
+●	Pain Point   : Needs a simple interface with clear, step-by-step guidance.
+ 
+  
+
+Persona 5:
+ 
+
+Persona 6:
+
+ 
+
+
+
+Persona 7:
+
+ 
+
+
+
+
+Define
+ Based on the empathy mapping insights, the core problems that the app aims to solve are:
+●	Users need a way to feel safe and secure when lost.
+●	Users require a user-friendly navigation system that simplifies map reading.
+●	Users need immediate access to support services.
+●	Needed a police station and was guided to the nearest one.
+●	Needed medical help and was directed to a nearby hospital.
+●	Got lost in a market and received AI chatbot guidance.
+
+   Problem Statement
+-    How might we design an intuitive app that helps lost individuals safely navigate unfamiliar areas, connects them to resources, and provides real-time updates to caregivers?   
+
+ 
+
+       Step 2: Ideate- Brainstorm potential features and functionalities that could address the defined problems:
+     Brainstorming
+  Innovative Features   :
+  -    Visual SOS Flare   : Sends location and emergency message.
+  -    Emergency Resources Widget   : Displays nearby resources.
+  -    Multilingual and Accessible Interface   : Supports various languages and audio guidance.
+
+  Unique Concepts
+  -    Real-Time Mapping and Navigation   : User-friendly maps with voice guidance.
+  -    Caregiver Alerts   : Periodic updates on the user’s location.
+  -    Vibration Feedback for Alerts   : Ensures alerts are noticed in noisy environments.
+-    User-Friendly Interface: A minimalistic design that highlights essential navigation features.
+-    Voice Navigation: Implement voice-guided directions to reduce the need for users to read complex maps.
+-    SOS Button: A prominent button that connects users to emergency services or designated contacts with a single tap.
+-    Location Sharing: Allow users to share their location with trusted contacts for added security.
+
+ 
+     
+
+
+  Step 3: Prototype- A low-fidelity prototype of the app that includes the following key screens:
+
+     Prototype Requirements and Features
+1.    Home Screen: Displays the user’s current location and a simple navigation bar.
+      Login/Sign-Up and Home Page:-
+   - Simple login/sign-up with minimal input.
+   The home page shows a map with emergency resources and a prominent SOS button.
+
+2.    Real-Time Navigation : Provides step-by-step voice-guided directions with visual cues :
+   - Voice-enabled, step-by-step directions with visual prompts.
+
+3.    Caregiver Alerts   :
+   - Sends updates to family members about the user’s location.
+
+4.    Resource Mapping   :
+   - Displays resources within a 500-meter radius with color-coded icons.
+
+5.    SOS Alert System   :
+   - Emergency flare that shares location and message with caregivers.
+
+6.    Multilingual Support   :
+   - Language preferences for diverse users.
+
+7.    Vibration Feedback for Alerts   :
+   - Vibration notifications for alerts.
+
+
+ Step 4: Test
+
+     User Testing
+1.    Prototype Testing   :
+   - Conduct usability tests with a group of users from the target demographics.
+   - Gather feedback on the app’s usability, clarity, and effectiveness in emergencies.
+
+2.    Feedback Collection   :
+   - Use surveys and interviews to collect qualitative data on user experience.
+   - Identify areas for improvement based on user interactions.
+
+3.    Iterate   :
+   - Refine the prototype based on user feedback.
+   - Focus on enhancing features that users found confusing or difficult to use.
+
+
+
+       
+Technologies & Tools used
+Napkin.ai
+Uizard.ai
+Motif.ai
+Blackbox.ai
+OnlinePersona creator- uxpressia.com/personas-online-tool, user persona.dev/
+https://founderpal.ai/swot-analysis-generator
+CHAT GPT
+
 ________________________________________
 Summary of Design Thinking Aspects Covered
 1.	Empathize: Each persona reflects the unique experiences and emotions of different user groups, helping the design team understand their needs and challenges.
