@@ -14,7 +14,7 @@ The **Smart Restaurant Management App** is an AI-powered platform that enhances 
 
 ## Tech Stack
 - **Frontend**: Streamlit, React (optional for UI enhancements)
-- **Backend**: Python (FastAPI, Flask)
+- **Backend**: Python (FastAPI)
 - **AI Model**: Gemini 1.5 Pro
 
 Design Thinking Approach
