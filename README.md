@@ -213,6 +213,8 @@ ________________________________________
 7.    Vibration Feedback for Alerts   :
    - Vibration notifications for alerts.
 
+ ![](images/chart.png)
+
     
 ##  Step 4: Test
 
@@ -255,7 +257,7 @@ CHAT GPT
  ![](images/App_Screenshot2.png)
  ![](images/App_Screenshot3.png)
  ![](images/App_Screenshot4.png)
- ![](images/Chart.png)
+
  
  Prototype for app: https://ugrwmfgcmrpfprywnau75t.streamlit.app/
 ________________________________________
