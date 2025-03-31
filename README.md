@@ -58,7 +58,7 @@ Desires
  SWOT Analysis
 
 
-![SWOT](SWOT.png)
+![SWOT](images/SWOT.png)
 
 ** User Persona Development**- Persona Examples:
 
@@ -86,7 +86,8 @@ Context of Use:
 ●	Needs the app to be intuitive and easy to navigate, especially in stressful situations.
 Quotes:
 "I just want an app that tells me where to go without all the fuss. Clear directions and a big button for help would be perfect."
- 
+
+ ![](images/persona1_sumit.png)
 ________________________________________
 
 **Persona 2**: Ram, the Caregiver
@@ -113,7 +114,8 @@ Context of Use:
 ●	Needs the app to provide quick access to emergency resources and communication tools.
 Quotes:
 "I need to know where my clients are at all times. An app that keeps me updated would give me peace of mind."
- 
+
+ ![](images/Persona2_Ram.png)
 ________________________________________
 
 **Persona 3**: Mia, the Child
@@ -140,7 +142,7 @@ Context of Use:
 ●	Needs the app to be visually appealing and gamified to keep her engaged.
 Quotes:
 "I want an app that can help me find my way back home and is fun to use, like a game!"
- 
+ ![](images/Persona3_Mia.png)
 ________________________________________
 
 **Persona 4**:
@@ -148,6 +150,8 @@ ________________________________________
 ●	Age: 75
 ●	Behavior   : Struggles with traditional GPS navigation.
 ●	Pain Point   : Needs a simple interface with clear, step-by-step guidance.
+
+![](images/Persona4_Smita.png)
  
  Define
  Based on the empathy mapping insights, the core problems that the app aims to solve are:
@@ -205,7 +209,7 @@ ________________________________________
 7.    Vibration Feedback for Alerts   :
    - Vibration notifications for alerts.
 
-
+    
 ##  Step 4: Test
 
      User Testing
@@ -239,8 +243,17 @@ CHAT GPT
 !(screen3.png)
 !(screen4.png)
 !(chart.png)
-Prototype for app
-https://ugrwmfgcmrpfprywnau75t.streamlit.app/
+![](images/screen1.png
+ ![](images/screen2.png)
+ ![](images/screen3.png)
+ ![](images/screen4.png)
+ ![](images/App_screen1.png)
+ ![](images/App_screen2.png)
+ ![](images/App_screen3.png)
+ ![](images/App_screen4.png)
+ ![](images/Chart)
+ 
+ Prototype for app: https://ugrwmfgcmrpfprywnau75t.streamlit.app/
 ________________________________________
 ## Summary of Design Thinking Aspects Covered
 1.	Empathize: Each persona reflects the unique experiences and emotions of different user groups, helping the design team understand their needs and challenges.
