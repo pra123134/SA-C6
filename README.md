@@ -28,10 +28,11 @@ The **Smart Restaurant Management App** is an AI-powered platform that enhances 
      - What challenges do you face when navigating unfamiliar areas?
      - How do you currently seek help if you feel lost?
      - What features would you find most helpful in an app designed for navigation and emergency support?
+
+![Form](images/Data form.png)
+
 ![](images/Data form.png)
  
- 
- Prototype for app: https://ugrwmfgcmrpfprywnau75t.streamlit.app/
    -    Observations   : Simulate scenarios where users might get lost and observe their reactions and decision-making processes.
  
 
