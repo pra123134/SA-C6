@@ -1,0 +1,16 @@
+ID,Latitude,Longitude,Timestamp,User_Query,Resource_Type,Resource_Latitude,Resource_Longitude,Distance_to_Resource,Weather_Condition,User
+1,28.7041,77.1025,27-03-2025 08:15,"""I?m lost in Delhi market""",Police,28.706,77.104,0.2,Clear,Traveler
+2,19.076,72.8777,27-03-2025 13:30,"""Help, I can?t find my way""",Shelter,19.078,72.875,0.3,Sunny,Elderly
+3,13.0827,80.2707,27-03-2025 18:00,"""Lost near Chennai beach""",Hospital,13.084,80.272,0.15,Rain,Traveler
+4,22.5726,88.3639,27-03-2025 02:00,"""I?m lost in Kolkata at night""",Shelter,22.574,88.365,0.18,Fog,Elderly
+5,12.9716,77.5946,27-03-2025 10:45,"""Where am I? Bengaluru is big""",Police,12.973,77.596,0.1,Cloudy,Traveler
+6,23.0225,72.5714,27-03-2025 15:20,"""Lost in Ahmedabad, no Gujarati""",Hospital,23.024,72.573,0.25,Clear,Traveler
+7,26.9124,75.7873,27-03-2025 19:10,"""Can?t find my hotel in Jaipur""",Shelter,26.914,75.789,0.22,Dust,Traveler
+8,18.5204,73.8567,27-03-2025 09:00,"""Lost my way in Pune""",Police,18.522,73.858,0.17,Sunny,Elderly
+9,17.385,78.4867,27-03-2025 23:55,"""I?m scared, lost in Hyderabad""",Hospital,17.387,78.488,0.2,Rain,Elderly
+10,27.0238,74.2179,27-03-2025 16:30,"""Lost in Rajasthan desert""",Shelter,27.025,74.22,0.4,Windy,Traveler
+301,19.076,72.8777,27-03-2025 10:15,Need police station,Police Station,19.0762,72.878,0.5 km,Clear,User_A
+302,19.2183,72.9781,27-03-2025 14:30,Medical help needed,Hospital,19.219,72.9785,0.3 km,Cloudy,User_B
+303,19.0676,72.8335,27-03-2025 18:00,Lost in market,Help Kiosk,19.0679,72.8337,0.4 km,Rainy,User_C
+304,19.0328,72.841,27-03-2025 21:45,Need transport guidance,Bus Stop,19.033,72.8415,0.2 km,Clear,User_D
+305,19.114,72.8629,27-03-2025 07:50,Looking for shelter,Relief Center,19.1145,72.8632,0.6 km,Foggy,User_E
