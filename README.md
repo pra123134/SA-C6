@@ -1,13 +1,21 @@
-Design a Smart System for Lost Individuals Support and Resource Mapping App prototype using a Design Thinking Approach.
+# Smart Restaurant Management App
 
-Problem Statement:
+## Overview
+The **Smart Restaurant Management App** is an AI-powered platform that enhances restaurant operations using Generative AI. The system optimizes menu personalization, automates promotions, and streamlines event management through multimodal AI capabilities.
 
-Vulnerable groups, including children, the elderly, and individuals with cognitive impairments, often face significant challenges when navigating unfamiliar environments, leading to increased anxiety and the risk of becoming lost. Current navigation and emergency assistance systems lack real-time updates, intuitive interfaces, and effective communication channels with caregivers or rescuers. As a result, these individuals may struggle to find safe locations or access necessary resources in critical situations.
+## Features
+- **AI-Generated Recipe Suggestions**: Personalized recommendations based on customer preferences.
+- **Dynamic Menu Personalization**: Real-time menu updates with visual enhancements.
+- **Automated Promotions**: AI-driven discount suggestions based on peak hours and customer behavior.
+- **Smart Event Management**: AI-powered scheduling and marketing support.
+- **Data Collection & Analysis**: Insights into restaurant performance and customer trends.
+- **Chatbot Support**: AI-driven customer interaction for reservations and inquiries.
+- **AI-Powered Training Modules**: Training support for chefs and restaurant managers.
 
-How might we design an intuitive mobile application that provides real-time navigation, connects lost individuals to nearby resources, and facilitates seamless communication with caregivers, ensuring their safety and well-being in unfamiliar surroundings?
-
-
- 
+## Tech Stack
+- **Frontend**: Streamlit, React (optional for UI enhancements)
+- **Backend**: Python (FastAPI, Flask)
+- **AI Model**: Gemini 1.5 Pro
 
 Design Thinking Approach
 Empathize: Researching Users' Needs
