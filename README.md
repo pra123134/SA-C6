@@ -57,7 +57,7 @@ Desires
  
  SWOT Analysis
 
-Include screenshots and images from your document.
+
 ![SWOT](SWOT.png)
 
 ** User Persona Development**- Persona Examples:
@@ -179,9 +179,6 @@ ________________________________________
 -    Location Sharing: Allow users to share their location with trusted contacts for added security.
 
  
-     
-
-
  ##  Step 3: Prototype- A low-fidelity prototype of the app that includes the following key screens:
 
      Prototype Requirements and Features
@@ -236,6 +233,14 @@ OnlinePersona creator- uxpressia.com/personas-online-tool, user persona.dev/
 https://founderpal.ai/swot-analysis-generator
 CHAT GPT
 
+## Demo & Screenshots
+!(screen1.png)
+!(screen2.png)
+!(screen3.png)
+!(screen4.png)
+!(chart.png)
+Prototype for app
+https://ugrwmfgcmrpfprywnau75t.streamlit.app/
 ________________________________________
 ## Summary of Design Thinking Aspects Covered
 1.	Empathize: Each persona reflects the unique experiences and emotions of different user groups, helping the design team understand their needs and challenges.
@@ -252,5 +257,4 @@ Ultimately, this project contributes to fostering greater independence, security
 
 
  
-Prototype for app
-https://ugrwmfgcmrpfprywnau75t.streamlit.app/
+
