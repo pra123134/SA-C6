@@ -56,6 +56,13 @@ Desires
 2.	Instant Connection to Caregivers or Emergency Services: There is a strong desire for a feature that allows users to quickly reach out for help, whether from friends, family, or emergency services.
  
  SWOT Analysis
+
+Include screenshots and images from your document.
+![Screenshot 1](images/SWOT.png)
+![Screenshot 2](images/screenshot2.png)
+
+ <img width="335" alt="image" src="https://github.com/user-attachments/assets/0eaa850e-ab84-47c3-917b-714536b2a387" />
+
 •  Customized Support: Tailored features for children, the elderly, and individuals with cognitive impairments to enhance reliability in critical situations.
 •  Real-Time Resource Mapping: Instantly identifies local resources and support networks for quick assistance.
 •  User-Friendly Interface: Simple design for easy adoption, especially by technology-averse users.
